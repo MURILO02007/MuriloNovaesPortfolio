@@ -2,9 +2,9 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
-    <meta name="description" content="Murilo Novaes Gama - Desenvolvedor Web & Especialista em Automação. Criação de sites modernos, bots inteligentes e soluções digitais de alto impacto.">
-    <title>Murilo Novaes Gama | Tecnologia & Inovação</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Portfólio de projetos de Murilo Novaes Gama - Desenvolvedor Web, Automação e QA. Sites, landing pages, bots e sistemas inteligentes.">
+    <title>Projetos | Murilo Novaes Gama</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
@@ -22,10 +22,9 @@
             color: #0a0a1a;
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
-            width: 100%;
         }
-        
-        /* Loader Responsivo */
+
+        /* Loader */
         .loader {
             position: fixed;
             top: 0;
@@ -44,33 +43,31 @@
             visibility: hidden;
         }
         .glitch-text {
-            font-size: clamp(1.2rem, 5vw, 2rem);
+            font-size: 2rem;
             font-weight: 800;
-            letter-spacing: clamp(2px, 3vw, 6px);
+            letter-spacing: 6px;
             background: linear-gradient(135deg, #0066ff, #00ccff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             animation: pulseGlow 1.5s infinite alternate;
-            text-align: center;
-            padding: 0 20px;
         }
         @keyframes pulseGlow {
             0% { text-shadow: 0 0 2px #0066ff; opacity: 0.8; }
             100% { text-shadow: 0 0 20px #0066ff; opacity: 1; }
         }
 
-        /* Header fixo responsivo */
+        /* Header fixo */
         .header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
             z-index: 1000;
-            padding: 12px 0;
+            padding: 16px 0;
             transform: translateY(-100%);
             transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             border-bottom: 1px solid rgba(0, 102, 255, 0.2);
@@ -78,16 +75,22 @@
         .header.visible {
             transform: translateY(0);
         }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+            position: relative;
+            z-index: 2;
+        }
         .header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 10px;
         }
         .logo {
             font-weight: 800;
-            font-size: clamp(1.1rem, 4vw, 1.5rem);
+            font-size: 1.5rem;
             background: linear-gradient(135deg, #0066ff, #00ccff);
             -webkit-background-clip: text;
             background-clip: text;
@@ -95,369 +98,132 @@
         }
         .nav-links {
             display: flex;
-            gap: clamp(12px, 3vw, 32px);
+            gap: 32px;
             align-items: center;
-            flex-wrap: wrap;
         }
         .nav-links a {
             text-decoration: none;
             color: #0a0a1a;
             font-weight: 500;
             transition: 0.2s;
-            font-size: clamp(0.75rem, 3vw, 1rem);
-            white-space: nowrap;
         }
         .nav-links a:hover {
             color: #0066ff;
         }
         .nav-btn {
             background: linear-gradient(95deg, #0066ff, #00ccff);
-            padding: 6px 16px;
+            padding: 8px 20px;
             border-radius: 40px;
             color: white !important;
         }
-        @media (max-width: 600px) {
-            .header .container {
-                flex-direction: column;
-                gap: 8px;
-            }
+        @media (max-width: 768px) {
             .nav-links {
-                justify-content: center;
+                gap: 16px;
             }
             .nav-links a {
-                white-space: nowrap;
+                font-size: 0.85rem;
             }
         }
 
-        /* Fundo com partículas */
-        #particles-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            opacity: 0.25;
-            pointer-events: none;
-        }
-
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 clamp(16px, 5vw, 32px);
-            position: relative;
-            z-index: 2;
-            width: 100%;
-        }
-        
-        section {
-            padding: clamp(50px, 10vw, 90px) 0;
-            border-bottom: 1px solid rgba(0, 102, 255, 0.1);
-        }
-        
-        h2 {
-            font-size: clamp(1.8rem, 6vw, 2.8rem);
-            font-weight: 800;
-            background: linear-gradient(125deg, #0a0a1a, #0066ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: clamp(30px, 6vw, 50px);
-            letter-spacing: -1px;
+        /* Hero da página de projetos */
+        .projects-hero {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f5ff 100%);
+            padding: 140px 0 80px;
             text-align: center;
         }
-        
-        .glass-card {
-            background: rgba(240, 245, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-radius: 28px;
-            border: 1px solid rgba(0, 102, 255, 0.2);
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
-        }
-        .glass-card:hover {
-            border-color: #0066ff;
-            box-shadow: 0 0 25px rgba(0, 102, 255, 0.15);
-            transform: translateY(-5px);
-        }
-        
-        button, .btn {
-            cursor: pointer;
-            border: none;
-            font-weight: 600;
-            transition: 0.2s;
-            background: linear-gradient(95deg, #0066ff, #00ccff);
-            color: white;
-            padding: clamp(10px, 3vw, 14px) clamp(20px, 5vw, 36px);
-            border-radius: 50px;
-            font-size: clamp(0.85rem, 3vw, 1rem);
-            box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
-        }
-        button:hover, .btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 20px rgba(0, 102, 255, 0.5);
-        }
-        .btn-outline {
-            background: transparent;
-            border: 1.5px solid #0066ff;
-            color: #0066ff;
-            box-shadow: none;
-        }
-        .btn-outline:hover {
-            background: #0066ff10;
-            color: #0066ff;
-        }
-
-        /* Hero Section Responsiva */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #ffffff 0%, #f0f5ff 100%);
-            padding: 80px 0 40px;
-        }
-        
-        .hero-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: clamp(30px, 6vw, 60px);
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-        }
-        
-        .hero-text {
-            flex: 1;
-            min-width: 260px;
-            text-align: left;
-        }
-        
-        .hero-avatar {
-            flex: 0.8;
-            min-width: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .avatar-tech {
-            width: clamp(180px, 40vw, 280px);
-            height: clamp(180px, 40vw, 280px);
-            background: linear-gradient(145deg, #0066ff, #00ccff);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.3);
-            animation: float 6s infinite ease;
-            overflow: hidden;
-        }
-        
-        .avatar-tech img {
-            width: 92%;
-            height: 92%;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid white;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .glow-name {
-            font-size: clamp(2rem, 7vw, 4rem);
+        .projects-hero h1 {
+            font-size: 3.5rem;
             font-weight: 800;
             background: linear-gradient(135deg, #0a0a1a, #0066ff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            line-height: 1.2;
+            margin-bottom: 20px;
         }
-        
-        .typewriter {
-            font-size: clamp(1.1rem, 4vw, 1.8rem);
-            margin: 15px 0;
-            font-weight: 500;
-            color: #1a1a2e;
+        .projects-hero p {
+            font-size: 1.2rem;
+            color: #4a4a6a;
+            max-width: 700px;
+            margin: 0 auto;
         }
-        
-        .typed-cursor {
-            color: #0066ff;
-        }
-        
-        .btn-group {
+
+        /* Filtros */
+        .filters {
             display: flex;
-            gap: clamp(12px, 3vw, 20px);
-            margin-top: clamp(20px, 5vw, 30px);
+            justify-content: center;
+            gap: 15px;
             flex-wrap: wrap;
+            margin: 50px 0 40px;
         }
-        
-        .hero-text p {
-            font-size: clamp(1rem, 3.5vw, 1.4rem);
-        }
-
-        /* Responsividade do Hero no mobile */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 100px 0 40px;
-                min-height: auto;
-            }
-            .hero-content {
-                flex-direction: column-reverse;
-                text-align: center;
-                gap: 30px;
-            }
-            .hero-text {
-                text-align: center;
-            }
-            .hero-text p {
-                text-align: center;
-            }
-            .btn-group {
-                justify-content: center;
-            }
-            .glow-name {
-                text-align: center;
-            }
-            .typewriter {
-                text-align: center;
-                justify-content: center;
-            }
-        }
-
-        /* Estatísticas Responsivas */
-        .stats-mini {
-            display: flex;
-            gap: clamp(15px, 3vw, 30px);
-            flex-wrap: wrap;
-            margin-top: 35px;
-        }
-        .stat-mini-item {
-            background: white;
-            border-radius: 20px;
-            padding: clamp(15px, 4vw, 20px) clamp(15px, 3vw, 25px);
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            flex: 1;
-            min-width: 140px;
-            border: 1px solid rgba(0,102,255,0.1);
-        }
-        .stat-mini-number {
-            font-size: clamp(1.6rem, 5vw, 2.2rem);
-            font-weight: 800;
-            color: #0066ff;
-        }
-        .stat-mini-item p {
-            font-size: clamp(0.75rem, 2.5vw, 0.9rem);
-        }
-
-        /* Serviços Responsivos */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: clamp(20px, 4vw, 35px);
-        }
-        .service-card {
-            padding: clamp(25px, 5vw, 35px) clamp(20px, 4vw, 25px);
+        .filter-btn {
+            background: transparent;
+            border: 1.5px solid rgba(0, 102, 255, 0.3);
+            color: #0a0a1a;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
             transition: 0.2s;
-            background: white;
+            box-shadow: none;
         }
-        .service-icon {
-            font-size: clamp(2.5rem, 6vw, 3rem);
-            color: #0066ff;
-            margin-bottom: 20px;
-        }
-        .service-card h3 {
-            font-size: clamp(1.4rem, 4.5vw, 1.8rem);
-            margin-bottom: 20px;
-            color: #0a0a1a;
-        }
-        .service-card p {
-            font-size: clamp(0.85rem, 3vw, 1rem);
+        .filter-btn.active, .filter-btn:hover {
+            background: linear-gradient(95deg, #0066ff, #00ccff);
+            border-color: transparent;
+            color: white;
+            transform: scale(1.02);
         }
 
-        /* Habilidades */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: clamp(20px, 5vw, 40px);
-        }
-        .skill-group {
-            flex: 1;
-            min-width: 200px;
-        }
-        .skill-item {
-            margin-bottom: 20px;
-        }
-        .skill-name {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            color: #0a0a1a;
-            font-size: clamp(0.85rem, 3vw, 1rem);
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-        .skill-bar {
-            height: 8px;
-            background: #e0e7ff;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .skill-progress {
-            width: 0%;
-            height: 100%;
-            background: linear-gradient(90deg, #0066ff, #00ccff);
-            border-radius: 10px;
-            transition: width 1.5s ease;
-        }
-
-        /* Portfolio Cards Responsivos */
-        .portfolio-grid {
+        /* Grid de projetos - CARDS CLICÁVEIS */
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: clamp(20px, 4vw, 30px);
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 40px;
+            margin: 40px 0 80px;
         }
         
-        .portfolio-card-link {
+        /* O card inteiro é um link clicável */
+        .project-card-link {
             text-decoration: none;
             display: block;
             cursor: pointer;
         }
         
-        .portfolio-card {
-            border-radius: 24px;
-            overflow: hidden;
+        .project-card {
             background: white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0,102,255,0.1);
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 102, 255, 0.1);
             height: 100%;
         }
         
-        .portfolio-img {
-            height: clamp(180px, 35vw, 220px);
+        .project-card-link:hover .project-card {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 45px rgba(0, 102, 255, 0.2);
+            border-color: rgba(0, 102, 255, 0.4);
+        }
+        
+        .project-image {
+            height: 260px;
             background: linear-gradient(145deg, #0066ff10, #00ccff10);
             position: relative;
             overflow: hidden;
         }
         
-        .portfolio-img img {
+        .project-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.4s ease;
         }
         
-        .portfolio-card-link:hover .portfolio-img img {
+        .project-card-link:hover .project-image img {
             transform: scale(1.05);
         }
         
-        .portfolio-overlay {
+        /* Overlay que aparece no hover */
+        .project-overlay {
             position: absolute;
             top: 0;
             left: 0;
@@ -471,151 +237,127 @@
             transition: 0.3s ease;
         }
         
-        .portfolio-card-link:hover .portfolio-overlay {
+        .project-card-link:hover .project-overlay {
             opacity: 1;
         }
         
-        .portfolio-overlay span {
+        .project-overlay span {
+            color: white;
             background: white;
             color: #0066ff;
-            padding: clamp(8px, 3vw, 12px) clamp(16px, 4vw, 28px);
+            padding: 14px 32px;
             border-radius: 50px;
+            text-decoration: none;
             font-weight: 700;
-            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            font-size: 1rem;
+            transition: 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         
-        .portfolio-info {
-            padding: clamp(16px, 4vw, 20px);
+        .project-card-link:hover .project-overlay span {
+            transform: scale(1.05);
+            background: #0066ff;
+            color: white;
         }
         
-        .portfolio-info h3 {
-            font-size: clamp(1.2rem, 4vw, 1.4rem);
-            margin-bottom: 8px;
+        .project-info {
+            padding: 28px;
+        }
+        
+        .project-info h3 {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
             color: #0a0a1a;
+            transition: color 0.2s;
         }
         
-        .portfolio-category {
+        .project-card-link:hover .project-info h3 {
+            color: #0066ff;
+        }
+        
+        .project-category {
             display: inline-block;
             background: rgba(0, 102, 255, 0.1);
             color: #0066ff;
-            padding: 4px 12px;
+            padding: 4px 14px;
             border-radius: 20px;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             font-weight: 600;
-            margin-bottom: 12px;
-        }
-        
-        .portfolio-desc {
-            color: #4a4a6a;
-            font-size: clamp(0.8rem, 2.8vw, 0.9rem);
-            line-height: 1.5;
             margin-bottom: 15px;
         }
         
-        .portfolio-tech {
+        .project-desc {
+            color: #4a4a6a;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        
+        .project-tech {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
+            margin-bottom: 0;
         }
         
-        .portfolio-tech-tag {
+        .tech-tag {
             background: #f0f5ff;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 20px;
             font-size: 0.7rem;
             font-weight: 500;
             color: #0066ff;
         }
-        
-        /* Depoimentos */
-        .depoimentos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: clamp(20px, 4vw, 30px);
-        }
-        .depoimento {
-            padding: clamp(20px, 5vw, 28px);
-            font-style: italic;
-            background: white;
-            font-size: clamp(0.85rem, 3vw, 1rem);
-        }
-        
-        /* Footer */
-        footer {
-            padding: clamp(30px, 8vw, 50px) 0;
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, #f0f5ff, #ffffff);
             text-align: center;
-            position: relative;
-            z-index: 2;
-            background: #f8faff;
-            border-top: 1px solid rgba(0,102,255,0.1);
+            padding: 80px 0;
+            margin-top: 40px;
         }
-        footer p {
-            font-size: clamp(0.8rem, 3vw, 1rem);
+        .btn {
+            cursor: pointer;
+            border: none;
+            font-weight: 600;
+            transition: 0.2s;
+            background: linear-gradient(95deg, #0066ff, #00ccff);
+            color: white;
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-size: 1rem;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
+        }
+
+        footer {
+            padding: 50px 0;
+            text-align: center;
+            background: #f8faff;
+            border-top: 1px solid rgba(0, 102, 255, 0.1);
         }
         .social-icons a {
             color: #0a0a1a;
-            margin: 0 clamp(8px, 3vw, 12px);
-            font-size: clamp(1.4rem, 5vw, 1.8rem);
+            margin: 0 12px;
+            font-size: 1.8rem;
             transition: 0.2s;
-            display: inline-block;
         }
         .social-icons a:hover {
             color: #0066ff;
         }
-        
-        /* CTA Section */
-        #contato > div {
-            border-radius: 40px;
-            margin: 0 clamp(16px, 5vw, 32px);
-        }
-        #contato h2 {
-            font-size: clamp(1.6rem, 5vw, 2.4rem);
-        }
-        
-        /* Ajustes gerais */
-        @media (max-width: 480px) {
-            .tech-badge, .portfolio-tech-tag {
-                font-size: 0.65rem;
-                padding: 3px 8px;
-            }
-            .btn-group {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .btn-group button, .btn-group a {
-                width: 100%;
-                text-align: center;
-            }
-            .stats-mini {
-                flex-direction: column;
-            }
-            .stat-mini-item {
-                min-width: auto;
-            }
-        }
-        
-        ::selection {
-            background: #0066ff;
-            color: white;
-        }
-        
-        a {
-            text-decoration: none;
-        }
-        
-        /* Ajuste do texto do typewriter */
-        .typewriter {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-        .typewriter span {
-            display: inline-block;
-        }
+
         @media (max-width: 768px) {
-            .typewriter {
-                justify-content: center;
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .projects-hero h1 {
+                font-size: 2.5rem;
+            }
+            .container {
+                padding: 0 20px;
             }
         }
     </style>
@@ -623,225 +365,142 @@
 <body>
 
 <div class="loader" id="loader">
-    <div class="glitch-text">MURILO N.GAMA // CARREGANDO</div>
+    <div class="glitch-text">CARREGANDO PROJETOS</div>
 </div>
-<canvas id="particles-canvas"></canvas>
 
-<!-- Header fixo -->
 <header class="header" id="mainHeader">
     <div class="container">
         <div class="logo">MURILO<span style="color:#0066ff;">.TECH</span></div>
         <div class="nav-links">
-            <a href="#home">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#habilidades">Skills</a>
-            <a href="projetos.html">Projetos</a>
-            <a href="#contato" class="nav-btn">Contato</a>
+            <a href="index.html">Início</a>
+            <a href="index.html#sobre">Sobre</a>
+            <a href="index.html#servicos">Serviços</a>
+            <a href="index.html#habilidades">Skills</a>
+            <a href="projetos.html" style="font-weight:600; color:#0066ff;">Projetos</a>
+            <a href="index.html#contato" class="nav-btn">Contato</a>
         </div>
     </div>
 </header>
 
 <main>
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="projects-hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
-                    <h1 class="glow-name">Murilo Novaes Gama</h1>
-                    <div class="typewriter"><span id="typed-text"></span><span class="typed-cursor">|</span></div>
-                    <p>Transformando ideias em soluções digitais modernas e automatizadas.</p>
-                    <div class="btn-group">
-                        <button class="btn" id="orcamentoBtn"><i class="fas fa-rocket"></i> Solicitar orçamento</button>
-                        <button class="btn-outline btn" id="whatsBtn"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</button>
-                    </div>
-                </div>
-                <div class="hero-avatar" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="avatar-tech">
-                        <img src="imagens/murilofoto001port.png" alt="Murilo Novaes Gama">
-                    </div>
-                </div>
-            </div>
+            <h1 data-aos="fade-up">Portfólio de Projetos</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Sites modernos, automações inteligentes e sistemas de alta performance desenvolvidos para clientes reais.</p>
         </div>
     </section>
 
-    <!-- Sobre Mim -->
-    <section id="sobre">
-        <div class="container">
-            <h2 data-aos="fade-up">Sobre Mim</h2>
-            <div class="glass-card" style="padding: clamp(25px, 6vw, 45px);" data-aos="fade-up" data-aos-delay="100">
-                <p style="font-size: clamp(0.95rem, 3.5vw, 1.15rem); line-height: 1.6; color: #1f1f3a;">Desenvolvedor web com experiência na criação de sites modernos, landing pages, automações e soluções digitais para pequenos negócios. Atuando de forma prática no desenvolvimento de projetos, busca unir design, performance e funcionalidade para entregar experiências profissionais e eficientes.</p>
-                <p style="font-size: clamp(0.95rem, 3.5vw, 1.15rem); line-height: 1.6; margin-top: 25px; color: #1f1f3a;">Possui conhecimentos em HTML, CSS, JavaScript, criação de interfaces responsivas, integração de ferramentas e automações para web. Também vem expandindo atuação na área de QA e testes de software, aplicando atenção aos detalhes e foco em qualidade nos projetos desenvolvidos.</p>
-                <p style="font-size: clamp(0.95rem, 3.5vw, 1.15rem); line-height: 1.6; margin-top: 25px; color: #1f1f3a;">Apaixonado por tecnologia, inovação e soluções digitais, está constantemente evoluindo suas habilidades e construindo projetos que ajudam negócios a fortalecerem sua presença online.</p>
-                
-                <div class="stats-mini">
-                    <div class="stat-mini-item" data-aos="zoom-in" data-aos-delay="200"><div class="stat-mini-number">10+</div><p>Projetos desenvolvidos</p></div>
-                    <div class="stat-mini-item" data-aos="zoom-in" data-aos-delay="300"><div class="stat-mini-number">Sites &</div><p>Landing pages</p></div>
-                    <div class="stat-mini-item" data-aos="zoom-in" data-aos-delay="400"><div class="stat-mini-number">Automações</div><p>Bots & IA</p></div>
-                    <div class="stat-mini-item" data-aos="zoom-in" data-aos-delay="500"><div class="stat-mini-number">Web & QA</div><p>Qualidade</p></div>
-                </div>
-            </div>
+    <div class="container">
+        <div class="filters" data-aos="fade-up" data-aos-delay="200">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="web">Sites & Landing Pages</button>
+            <button class="filter-btn" data-filter="automation">Automação & Bots</button>
+            <button class="filter-btn" data-filter="system">Sistemas & Dashboards</button>
+            <button class="filter-btn" data-filter="qa">QA & Testes</button>
         </div>
-    </section>
 
-    <!-- Serviços -->
-    <section id="servicos">
-        <div class="container">
-            <h2 data-aos="fade-up">Serviços de Alto Impacto</h2>
-            <div class="services-grid">
-                <div class="service-card glass-card" data-aos="flip-left" data-aos-duration="700">
-                    <div class="service-icon"><i class="fas fa-code"></i></div>
-                    <h3>Criação de Sites</h3>
-                    <p>Sites modernos, landing pages, sistemas web responsivos e design profissional com SEO avançado e alta performance.</p>
-                    <div class="tech-list"><span class="tech-badge">React</span><span class="tech-badge">SEO</span><span class="tech-badge">Mobile First</span></div>
-                    <button class="btn site-quote" style="margin-top: 15px;">Quero meu site</button>
-                </div>
-                <div class="service-card glass-card" data-aos="flip-left" data-aos-duration="700" data-aos-delay="100">
-                    <div class="service-icon"><i class="fab fa-whatsapp"></i></div>
-                    <h3>Automação com Bots</h3>
-                    <p>Bots inteligentes para atendimento 24h, captação de clientes, respostas automáticas e integração com IA.</p>
-                    <div class="tech-list"><span class="tech-badge">IA Generativa</span><span class="tech-badge">WhatsApp API</span><span class="tech-badge">CRM</span></div>
-                    <button class="btn-outline btn" id="whatsBotBtn">Automatizar agora</button>
-                </div>
-                <div class="service-card glass-card" data-aos="flip-left" data-aos-duration="700" data-aos-delay="200">
-                    <div class="service-icon"><i class="fas fa-vial"></i></div>
-                    <h3>Analista de QA</h3>
-                    <p>Garantia de qualidade com testes manuais, identificação de bugs e melhoria da experiência do usuário.</p>
-                    <div class="tech-list"><span class="tech-badge">Cypress</span><span class="tech-badge">Selenium</span><span class="tech-badge">Jest</span></div>
-                    <button class="btn-outline btn" id="qaBtn">Quero qualidade</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Habilidades -->
-    <section id="habilidades">
-        <div class="container">
-            <h2 data-aos="fade-up">Tech Stack & Skills</h2>
-            <div class="skills-container">
-                <div class="skill-group" data-aos="fade-right">
-                    <div class="skill-item"><div class="skill-name"><span>HTML5/CSS3</span><span>95%</span></div><div class="skill-bar"><div class="skill-progress" data-width="95"></div></div></div>
-                    <div class="skill-item"><div class="skill-name"><span>JavaScript/React</span><span>90%</span></div><div class="skill-bar"><div class="skill-progress" data-width="90"></div></div></div>
-                    <div class="skill-item"><div class="skill-name"><span>Node.js / APIs</span><span>85%</span></div><div class="skill-bar"><div class="skill-progress" data-width="85"></div></div></div>
-                </div>
-                <div class="skill-group" data-aos="fade-left">
-                    <div class="skill-item"><div class="skill-name"><span>Automação WhatsApp</span><span>92%</span></div><div class="skill-bar"><div class="skill-progress" data-width="92"></div></div></div>
-                    <div class="skill-item"><div class="skill-name"><span>QA / Cypress</span><span>88%</span></div><div class="skill-bar"><div class="skill-progress" data-width="88"></div></div></div>
-                    <div class="skill-item"><div class="skill-name"><span>UX/UI & Design</span><span>87%</span></div><div class="skill-bar"><div class="skill-progress" data-width="87"></div></div></div>
-                </div>
-            </div>
-            <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; justify-content: center;" data-aos="zoom-in">
-                <span class="tech-badge"><i class="fab fa-react"></i> React</span>
-                <span class="tech-badge"><i class="fab fa-js"></i> JS Moderno</span>
-                <span class="tech-badge"><i class="fas fa-robot"></i> Bot IA</span>
-                <span class="tech-badge"><i class="fas fa-database"></i> Banco de Dados</span>
-                <span class="tech-badge">GitHub Actions</span>
-                <span class="tech-badge">Selenium</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projetos Recentes -->
-    <section>
-        <div class="container">
-            <h2 data-aos="fade-up">Projetos Recentes</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-card-link" data-url="https://gama-novaes-nexus.vercel.app" data-type="link">
-                    <div class="portfolio-card">
-                        <div class="portfolio-img">
-                            <img src="imagens/gamanovaesfoto.png" alt="Gama Novaes">
-                            <div class="portfolio-overlay"><span>🔗 Ver projeto</span></div>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">Site Institucional</span>
-                            <h3>Gama Novaes</h3>
-                            <p class="portfolio-desc">Landing page moderna para loja de material de construção.</p>
-                            <div class="portfolio-tech">
-                                <span class="portfolio-tech-tag">HTML5</span>
-                                <span class="portfolio-tech-tag">CSS3</span>
-                                <span class="portfolio-tech-tag">JavaScript</span>
-                            </div>
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Projeto 1 - Gama Novaes -->
+            <div class="project-card-link" data-category="web" data-type="link" data-url="https://gama-novaes-nexus.vercel.app">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="imagens/gamanovaesfoto.png" alt="Gama Novaes">
+                        <div class="project-overlay">
+                            <span>🔗 Ver projeto completo</span>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-card-link" data-url="https://www.jamyllegama.com.br" data-type="link">
-                    <div class="portfolio-card">
-                        <div class="portfolio-img">
-                            <img src="imagens/jamyllepagetofo.png" alt="Jamylle Gama">
-                            <div class="portfolio-overlay"><span>🔗 Ver projeto</span></div>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">Site Profissional</span>
-                            <h3>Jamylle Gama Advocacia</h3>
-                            <p class="portfolio-desc">Site profissional para advocacia com design elegante.</p>
-                            <div class="portfolio-tech">
-                                <span class="portfolio-tech-tag">HTML5</span>
-                                <span class="portfolio-tech-tag">CSS3</span>
-                                <span class="portfolio-tech-tag">Formspree</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-card-link" data-url="pdfs/reportqa.pdf" data-type="pdf">
-                    <div class="portfolio-card">
-                        <div class="portfolio-img">
-                            <img src="imagens/fotoqalogo.png" alt="Relatório QA">
-                            <div class="portfolio-overlay"><span>📄 Baixar PDF</span></div>
-                        </div>
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">Documentação Técnica</span>
-                            <h3>Relatório de QA</h3>
-                            <p class="portfolio-desc">Análise de qualidade e testes realizados no sistema.</p>
-                            <div class="portfolio-tech">
-                                <span class="portfolio-tech-tag">Testes Manuais</span>
-                                <span class="portfolio-tech-tag">Cypress</span>
-                                <span class="portfolio-tech-tag">QA</span>
-                            </div>
+                    <div class="project-info">
+                        <span class="project-category">Site Institucional</span>
+                        <h3>Gama Novaes</h3>
+                        <p class="project-desc">Landing page moderna para loja de material de construção, com páginas de produtos e sistema de busca e orçamentos.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">SEO</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 40px;" data-aos="fade-up">
-                <a href="projetos.html" class="btn" style="display: inline-block;"><i class="fas fa-arrow-right"></i> Ver todos os projetos</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Diferenciais -->
-    <section>
-        <div class="container">
-            <h2 data-aos="fade-up">Diferenciais</h2>
-            <div class="services-grid" style="margin-bottom: 60px;">
-                <div class="glass-card" style="padding: clamp(20px, 5vw, 30px); text-align: center;" data-aos="flip-up"><i class="fas fa-bolt" style="font-size: clamp(1.8rem, 5vw, 2rem); color:#0066ff"></i><h4 style="margin-top: 10px;">Atendimento Rápido</h4></div>
-                <div class="glass-card" style="padding: clamp(20px, 5vw, 30px); text-align: center;" data-aos="flip-up" data-aos-delay="100"><i class="fas fa-mobile-alt" style="font-size: clamp(1.8rem, 5vw, 2rem); color:#0066ff"></i><h4 style="margin-top: 10px;">100% Responsivos</h4></div>
-                <div class="glass-card" style="padding: clamp(20px, 5vw, 30px); text-align: center;" data-aos="flip-up" data-aos-delay="200"><i class="fas fa-robot" style="font-size: clamp(1.8rem, 5vw, 2rem); color:#0066ff"></i><h4 style="margin-top: 10px;">Automações IA</h4></div>
-                <div class="glass-card" style="padding: clamp(20px, 5vw, 30px); text-align: center;" data-aos="flip-up" data-aos-delay="300"><i class="fas fa-chart-simple" style="font-size: clamp(1.8rem, 5vw, 2rem); color:#0066ff"></i><h4 style="margin-top: 10px;">Foco em Conversão</h4></div>
-            </div>
-            <h2 data-aos="fade-up">Depoimentos</h2>
-            <div class="depoimentos-grid">
-                <div class="depoimento glass-card" data-aos="fade-right"><i class="fas fa-star" style="color: gold;"></i> "Excelente profissional, entregou meu site muito rápido e com design incrível." <br/><strong>— Carla M.</strong></div>
-                <div class="depoimento glass-card" data-aos="fade-up"><i class="fas fa-star" style="color: gold;"></i> "A automação aumentou muito meu atendimento e as vendas dispararam!" <br/><strong>— Rodrigo S.</strong></div>
-                <div class="depoimento glass-card" data-aos="fade-left"><i class="fas fa-star" style="color: gold;"></i> "Muito organizado, atencioso e com enorme capacidade técnica." <br/><strong>— Julia T.</strong></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Final -->
-    <section id="contato">
-        <div style="background: linear-gradient(135deg, #f0f5ff, #ffffff); border-radius: 40px;">
-            <div class="container" style="text-align: center; padding: clamp(40px, 10vw, 60px) clamp(20px, 5vw, 20px);">
-                <h2 style="font-size: clamp(1.6rem, 5vw, 2.4rem);">Seu negócio precisa de presença digital profissional.</h2>
-                <p style="margin: 30px 0; font-size: clamp(1rem, 3.5vw, 1.2rem); color:#2d2d44;">Vamos transformar sua ideia em uma solução tecnológica de alto nível.</p>
-                <div class="btn-group" style="justify-content: center;">
-                    <button id="whatsFinalBtn"><i class="fab fa-whatsapp"></i> WhatsApp</button>
-                    <button id="orcamentoFinalBtn"><i class="fas fa-calculator"></i> Solicitar orçamento</button>
-                    <a href="projetos.html" class="btn-outline btn" style="text-decoration: none; display: inline-block;"><i class="fas fa-microchip"></i> Ver projetos</a>
+            <!-- Projeto 2 - Jamylle Gama Advocacia -->
+            <div class="project-card-link" data-category="web" data-type="link" data-url="https://www.jamyllegama.com.br">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="imagens/jamyllepagetofo.png" alt="Jamylle Gama">
+                        <div class="project-overlay">
+                            <span>🔗 Ver projeto completo</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Site Profissional</span>
+                        <h3>Jamylle Gama Advocacia</h3>
+                        <p class="project-desc">Página profissional para apresentação de serviços de advocacia, com design elegante e formulário de contato.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Formspree</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Projeto 3 - Relatório de QA (DOWNLOAD PDF) -->
+            <div class="project-card-link" data-category="qa" data-type="pdf" data-url="pdfs/reportqa.pdf">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="imagens/fotoqalogo.png" alt="Relatório de Qualidade">
+                        <div class="project-overlay">
+                            <span>📄 Baixar PDF</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Documentação Técnica</span>
+                        <h3>Relatório de QA - Gama Novaes</h3>
+                        <p class="project-desc">Documento completo com análise de qualidade, testes realizados, métricas de performance e recomendações para o sistema Insights Pro.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Testes Manuais</span>
+                            <span class="tech-tag">Cypress</span>
+                            <span class="tech-tag">Relatório Técnico</span>
+                            <span class="tech-tag">QA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 4 - academia (LINK) -->
+              <div class="project-card-link" data-category="qa" data-type="pdf" data-url="https://evolutiongym-qa5n.vercel.app">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="imagens/academiaevolu.png" alt="Relatório de Qualidade">
+                        <div class="project-overlay">
+                            <span>🔗 Ver projeto completo</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Academia</span>
+                        <h3>Academia Evolution</h3>
+                        <p class="project-desc">Plataforma online para gerenciamento de academia, com funcionalidades de agendamento, acompanhamento de treinos e pagamento.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag"></span>
+                            <span class="tech-tag"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- CTA para contato -->
+    <section class="cta-section">
+        <div class="container" data-aos="fade-up">
+            <h2 style="font-size: 2rem; margin-bottom: 20px;">Gostou dos projetos?</h2>
+            <p style="margin-bottom: 30px; color: #4a4a6a;">Vamos criar uma solução personalizada para o seu negócio.</p>
+            <a href="index.html#contato" class="btn"><i class="fab fa-whatsapp"></i> Solicitar orçamento</a>
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer>
         <div class="container">
             <p><strong>Murilo Novaes Gama</strong> • <i class="fab fa-whatsapp"></i> +55 71 98609-3615</p>
@@ -860,136 +519,104 @@
     AOS.init({
         duration: 800,
         once: false,
-        offset: 50,
-        easing: 'ease-out-quad'
+        offset: 100
     });
 
+    // Loader
     window.addEventListener('load', () => {
         setTimeout(() => {
             const loader = document.getElementById('loader');
             loader.classList.add('loader-hidden');
             setTimeout(() => loader.style.display = 'none', 800);
-        }, 800);
-        animateSkills();
+        }, 600);
     });
 
-    // Typing Effect
-    const texts = ["Desenvolvedor Web", "Automação Inteligente", "QA Analyst"];
-    let index = 0, charIndex = 0;
-    const typedSpan = document.getElementById("typed-text");
-    function type() {
-        if (charIndex < texts[index].length) {
-            typedSpan.innerText += texts[index].charAt(charIndex);
-            charIndex++;
-            setTimeout(type, 80);
-        } else {
-            setTimeout(erase, 1800);
-        }
-    }
-    function erase() {
-        if (charIndex > 0) {
-            typedSpan.innerText = texts[index].substring(0, charIndex-1);
-            charIndex--;
-            setTimeout(erase, 40);
-        } else {
-            index = (index+1) % texts.length;
-            setTimeout(type, 300);
-        }
-    }
-    type();
-
-    function animateSkills() {
-        const progressBars = document.querySelectorAll('.skill-progress');
-        progressBars.forEach(bar => {
-            const width = bar.getAttribute('data-width');
-            bar.style.width = width + '%';
-        });
-    }
-    
-    // Partículas Responsivas
-    const canvas = document.getElementById('particles-canvas');
-    const ctxP = canvas.getContext('2d');
-    function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        initParticles();
-    }
-    let particles = [];
-    function initParticles() {
-        particles = [];
-        const particleCount = Math.min(60, Math.floor(window.innerWidth / 20));
-        for(let i=0;i<particleCount;i++) {
-            particles.push({x:Math.random()*canvas.width, y:Math.random()*canvas.height, radius:Math.random()*2+1, alpha:Math.random()*0.5});
-        }
-    }
-    function drawParticles() {
-        ctxP.clearRect(0,0,canvas.width,canvas.height);
-        ctxP.fillStyle = "#0066ff";
-        for(let p of particles) {
-            ctxP.globalAlpha = p.alpha;
-            ctxP.beginPath();
-            ctxP.arc(p.x, p.y, p.radius, 0, Math.PI*2);
-            ctxP.fill();
-            p.y += 0.3;
-            if(p.y > canvas.height) p.y = 0;
-        }
-        requestAnimationFrame(drawParticles);
-    }
-    resizeCanvas();
-    drawParticles();
-    window.addEventListener('resize', () => {
-        resizeCanvas();
-    });
-
-    // Header
+    // Header fixo
     const header = document.getElementById('mainHeader');
     window.addEventListener('scroll', () => {
-        if(window.scrollY > 50) {
+        if(window.scrollY > 100) {
             header.classList.add('visible');
         } else {
             header.classList.remove('visible');
         }
     });
 
-    function handleCardClick(url, type) {
-        if(type === 'pdf') {
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = url.split('/').pop();
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        } else {
-            window.open(url, '_blank');
-        }
-    }
+    // Filtro dos projetos
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card-link');
 
-    const portfolioCards = document.querySelectorAll('.portfolio-card-link');
-    portfolioCards.forEach(card => {
-        const url = card.getAttribute('data-url');
-        const type = card.getAttribute('data-type') || 'link';
-        card.addEventListener('click', (e) => {
-            if(e.target.closest('.btn') || e.target.closest('a')) return;
-            handleCardClick(url, type);
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            const filterValue = button.getAttribute('data-filter');
+            
+            projectCards.forEach(card => {
+                if(filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 200);
+                }
+            });
+            
+            AOS.refresh();
         });
     });
 
-    const number = "5571986093615";
-    function openWhats() { window.open(`https://wa.me/${number}?text=Olá%20Murilo,%20vim%20do%20seu%20portfólio%20e%20gostaria%20de%20mais%20informações!`, '_blank'); }
-    const whatsBtns = document.querySelectorAll('#whatsBtn, #whatsBotBtn, #whatsFinalBtn');
-    whatsBtns.forEach(btn => btn.addEventListener('click', openWhats));
-    const orcBtns = document.querySelectorAll('#orcamentoBtn, #orcamentoFinalBtn');
-    orcBtns.forEach(btn => btn.addEventListener('click', openWhats));
-    document.querySelectorAll('.site-quote, #qaBtn').forEach(btn => btn.addEventListener('click', openWhats));
-    
-    document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
+    // Tornar cada card clicável - Suporte para LINK e PDF DOWNLOAD
+    const projectLinks = document.querySelectorAll('.project-card-link');
+    projectLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Previne que o clique no filtro dispare o redirecionamento
+            if(e.target.closest('.filter-btn')) return;
+            
+            const type = this.getAttribute('data-type');
+            const url = this.getAttribute('data-url');
+            
+            if(!url || url === '#' || url === '') {
+                console.warn('URL do projeto não configurada');
+                alert('Link do projeto será adicionado em breve!');
+                return;
+            }
+            
+            // Se for PDF, faz o download
+            if(type === 'pdf') {
+                // Cria um link temporário para forçar o download
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = url.split('/').pop(); // Pega o nome do arquivo
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } 
+            // Se for link normal, abre em nova aba
+            else {
+                window.open(url, '_blank');
+            }
+        });
+    });
+
+    // Scroll suave
+    document.querySelectorAll('.nav-links a[href^="#"], a[href^="index.html#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            const target = this.getAttribute('href');
-            if(target !== "#") {
+            const href = this.getAttribute('href');
+            if(href.includes('#') && !href.includes('projetos')) {
                 e.preventDefault();
-                const element = document.querySelector(target);
-                if(element) {
-                    element.scrollIntoView({behavior: 'smooth', block: 'start'});
+                const targetId = href.split('#')[1];
+                if(targetId) {
+                    const targetElement = document.getElementById(targetId);
+                    if(targetElement) {
+                        targetElement.scrollIntoView({behavior: 'smooth'});
+                    }
                 }
             }
         });
